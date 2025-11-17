@@ -49,7 +49,7 @@
 
   <button id="startBtn">スタート</button>
 
-  <p id="result">結果：まだ未実行</p>
+  <p id="result">結果：何になるかな？</p>
 
   <script>
     var items = ["豊後", "信州", "十和田", "箱根", "草津"];
