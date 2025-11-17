@@ -5,13 +5,13 @@
   <title>入浴剤ルーレット</title>
 
   <style>
-    /* 白黒の超シンプルCSS */
+    /*CSS */
     body {
       font-family: sans-serif;
       text-align: center;
       padding: 20px;
-      background-color: #ffffff; /* 白 */
-      color: #000000;            /* 黒 */
+      background-color: #ffffff;
+      color: #000000;           
     }
 
     h1 {
@@ -27,8 +27,8 @@
     button {
       padding: 8px 16px;
       font-size: 16px;
-      background-color: #f0f0f0; /* 薄いグレー */
-      border: 1px solid #000000; /* 黒い枠 */
+      background-color: #f0f0f0; 
+      border: 1px solid #000000;
       cursor: pointer;
       margin-top: 15px;
     }
@@ -62,5 +62,7 @@
   </script>
 </body>
 </html>
+
+   
 
      
