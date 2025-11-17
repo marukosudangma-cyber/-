@@ -2,53 +2,65 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>シンプルルーレット</title>
+  <title>入浴剤ルーレット</title>
+
+  <style>
+    /* 白黒の超シンプルCSS */
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #ffffff; /* 白 */
+      color: #000000;            /* 黒 */
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 6px 0;
+    }
+
+    button {
+      padding: 8px 16px;
+      font-size: 16px;
+      background-color: #f0f0f0; /* 薄いグレー */
+      border: 1px solid #000000; /* 黒い枠 */
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    #result {
+      font-size: 20px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>シンプルルーレット</h1>
+  <h1>入浴剤ルーレット</h1>
 
-  <p>カンマ（,）で区切って項目を入力してください。</p>
-  <p>例：Aさん,Bさん,Cさん</p>
+  <p>次の中からランダムに1つ選びます：</p>
+  <p>豊後・信州・十和田・箱根・草津</p>
 
-  <textarea id="items" rows="4" cols="40">1,2,3,4,5,6</textarea>
-  <br>
   <button id="startBtn">スタート</button>
 
   <p id="result">結果：まだ未実行</p>
 
   <script>
-    // ボタンがクリックされたときの処理
+    var items = ["豊後", "信州", "十和田", "箱根", "草津"];
+
     document.getElementById("startBtn").onclick = function () {
-      // テキストエリアの中身を取得
-      var text = document.getElementById("items").value;
-
-      // カンマで分割
-      var rawItems = text.split(",");
-
-      // 前後の空白を削って、空っぽの文字は除外
-      var items = [];
-      for (var i = 0; i < rawItems.length; i++) {
-        var s = rawItems[i].trim();
-        if (s.length > 0) {
-          items.push(s);
-        }
-      }
-
-      // 何も入力されていないとき
-      if (items.length === 0) {
-        alert("項目を入力してください。");
-        return;
-      }
-
-      // 0 〜 items.length-1 のランダムな数
       var randomIndex = Math.floor(Math.random() * items.length);
-
-      // ランダムに1つ選ぶ
       var selected = items[randomIndex];
-
-      // 結果を画面に表示
       document.getElementById("result").textContent = "結果：" + selected;
     };
   </script>
 </body>
 </html>
+
+     
